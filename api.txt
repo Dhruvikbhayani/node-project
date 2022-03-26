@@ -1,0 +1,3 @@
+77662731887ee069bcd6b1bfe3e00608
+
+api = https://api.openweathermap.org/data/2.5/weather?q=surat&appid=77662731887ee069bcd6b1bfe3e00608
