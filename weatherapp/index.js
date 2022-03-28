@@ -20,7 +20,7 @@ const replaceVal = (tempVal, orgVal) => {
 const server = http.createServer((req, res) => {
     if (req.url == "/") {
         requests(
-                `http://api.openweathermap.org/data/2.5/weather?q=Pune&units=metric&appid=${process.env.APPID}`
+                "https://api.openweathermap.org/data/2.5/weather?q=surat&appid=77662731887ee069bcd6b1bfe3e00608"
             )
             .on("data", (chunk) => {
                 const objdata = JSON.parse(chunk);
@@ -41,4 +41,6 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(4000, "127.0.0.1");
+server.listen(5000, "127.0.0.1", () => {
+    console.log("Port is Run")
+});
