@@ -1,0 +1,55 @@
+<!-- api=https://type.fit/api/quotes -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Website</title>
+</head>
+
+<body>
+
+    <div id="quotes"></div>
+    <div id="author"></div>
+    <button id="newq">new Quotes</button>
+    <script>
+        const quotes = document.getElementById("quotes")
+        const author = document.getElementById("author")
+        const newq = document.getElementById("newq")
+        let realdata = "";
+
+        let getnewquotes = (realdata) => {
+            let rnum = Math.floor(Math.random() * 10)
+                // console.log(rnum)
+                // console.log(realdata[rnum].author)
+            quotes.innerText = `${realdata[rnum].text}`
+            author.innerText = `${realdata[rnum].author}`
+        }
+
+        const getqoutes = async() => {
+            const api = "https://type.fit/api/quotes"
+            try {
+                let data = await fetch(api)
+                let realdata = await data.json()
+
+                // console.log(realdata.length)
+                // console.log(realdata[0].text)
+                // console.log(realdata[0].author)
+                getnewquotes(realdata);
+
+            } catch (err) {
+                console.log(err)
+            }
+        }
+        newq.addEventListener('click', realod)
+
+        function realod() {
+            location.reload();
+        }
+        getqoutes();
+    </script>
+</body>
+
+</html>
