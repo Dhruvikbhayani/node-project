@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
     {{>header}}
 </head>
@@ -25,7 +23,7 @@
                     <div class="main_layer">
                         <p id="city_name">Get</p>
                         <div class="middle_layer data_hide">
-                            <p id="temp"><span>0</span><sup>o</sup>C</p>
+                            <p id="temp"><span class="temp_re">0</span><sup>o</sup>C</p>
                             <p id="temp_status"><i class="fa fa-cloud" arial-hidden="true"></i></p>
                         </div>
                     </div>
@@ -35,6 +33,34 @@
     </div>
     {{>footer}}
     <script src="js/main.js"></script>
+    <script>
+        const getCurrentDay = () => {
+            var weekday = new Array(7);
+            weekday[0] = "Sunday";
+            weekday[1] = "Monday";
+            weekday[2] = "Tue";
+            weekday[3] = "Wed";
+            weekday[4] = "Thursday"; 
+            weekday[5] = "Friday"; 
+            weekday[6] = "Saturday"; 
+            let currentTime = new Date();
+             let days = weekday[currentTime.getDay()];
+        const day=document.getElementById('day')
+          day.innertext=days
+        }; 
+
+       
+        const getCurrentTime = () => {
+
+                var months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec",]; 
+                var now = new Date();
+                var month = months[now.getMonth() + 1]; 
+                var date = now.getDate(); 
+                 var time= `${month} ${date} `
+        const time=document.getElementById('today_data')        
+            }; 
+            curDate.innerHTML = getCurrentDay() + " | " + getCurrentTime(); 
+    </script>
 </body>
 
 </html>
