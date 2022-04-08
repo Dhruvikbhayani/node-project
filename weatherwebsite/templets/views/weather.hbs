@@ -32,7 +32,7 @@
         </div>
     </div>
     {{>footer}}
-    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
     <script>
         const getCurrentDay = () => {
             var weekday = new Array(7);
@@ -56,10 +56,11 @@
                 var now = new Date();
                 var month = months[now.getMonth() + 1]; 
                 var date = now.getDate(); 
-                 var time= `${month} ${date} `
-        const time=document.getElementById('today_data')        
+                 var time1= `${month} ${date} `
+        const time=document.getElementById('today_data')
+                today_data.innertext=time1
             }; 
-            curDate.innerHTML = getCurrentDay() + " | " + getCurrentTime(); 
+        getCurrentDay() + " | " + getCurrentTime(); 
     </script>
 </body>
 
