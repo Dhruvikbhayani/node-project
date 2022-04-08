@@ -30,12 +30,6 @@ app.get("*", (req, res) => {
     res.render('404err')
 })
 
-
-
-
-
-
-
 app.listen(port, () => {
     console.log(`server is run on port ${port}`)
 })
