@@ -1,2 +1,3 @@
-let uri = `https://api.openweathermap.org/data/2.5/weather?q=surat&units=metric&appid=b3a9902a00786c64bf2ec4bceca47fcb`
 
+
+`https://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=b3a9902a00786c64bf2ec4bceca47fcb`

@@ -2,30 +2,39 @@
 <html lang="en">
 
 <head>
-   {{>header}}
+    {{>header}}
 </head>
 
 <body>
     {{>navbar}}
-    <!-- main header -->
-    <div class="containter-fluid main_header">
+
+    <!-- main header  -->
+    <div class="main_header">
+
         <div class="row">
-            <div class="col-md-10 clo-12 mx-auto">
-                <div class="row">
-                    <!-- rigth side div -->
-                    <div class="col-md-12 col-12 main_header_left align-items-center">
-                        <figure class="err">
-                            <img src="images/404.png" alt="dhruvik" class="img-fluid" title="dhruvik">
-                        </figure>
-            
-                        <a href="/"> <button>Go back</button></a>
-                        </div>  
-                    </div>
+            <div class="col-md-10 col-12 mx-auto ">
+                <div class=" main_header_left align-items-center">
+                    <figure class="errimg">
+                        <img src="images/404.png" alt="thapa" title="thapatechnical" class="img-fluid">
+                    </figure>
+                    <p>Welcome to Thapa Technical World</p>
+                    <h1>{{errorMsg}}</h1>
+                    <a href="/"><button>Go Back</button></a>
                 </div>
             </div>
+
         </div>
     </div>
-   {{>footer}}
+
+    </div>
+
+    <!-- footer -->
+
+    <footer>
+        <p>
+            created with ❤ Dhruvik
+        </p>
+    </footer>
 </body>
 
 </html>

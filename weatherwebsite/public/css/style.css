@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Piazzolla', serif;
+    /* font-family: "Roboto", sans-serif; */
+    font-family: "Piazzolla", serif;
 }
 
 :root {
     --main-bg: #1e272e;
-    --main-color: #0097e6
+    --main-color: #0097e6;
 }
 
 html {
+    height: 100%;
     font-size: 62.5%;
 }
 
@@ -25,6 +28,9 @@ body {
     margin: 0;
 }
 
+
+/* navbar style */
+
 .main_menu {
     background-color: var(--main-bg);
 }
@@ -33,10 +39,6 @@ body {
     color: #fff;
     background-color: var(--main-bg);
     padding: 2rem 0;
-}
-
-.navbar li {
-    margin-left: 20px;
 }
 
 .navbar a {
@@ -48,8 +50,12 @@ body {
     color: var(--main-color);
 }
 
+.navbar li {
+    margin-left: 2rem;
+}
+
 .navbar-toggler {
-    background-color: grey;
+    background-color: #718093;
 }
 
 .fa-snowflake {
@@ -67,8 +73,12 @@ body {
     }
 }
 
+
+/* main header part  */
+
 .main_header_left {
     height: 70rem;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,7 +95,7 @@ body {
     text-transform: capitalize;
 }
 
-.main_header_left .text {
+.txt_clr {
     color: var(--main-color);
 }
 
@@ -95,20 +105,23 @@ body {
     font-size: 1.4rem;
     border-radius: 2rem;
     text-transform: uppercase;
-    box-shadow: 0 8px 6px -6px #000;
+    box-shadow: 0 8px 6px -6px black;
     outline: none;
+    /* transition: all 0.2s linear; */
 }
 
 .main_header_left button:hover {
     box-shadow: 0 8px 6px -6px var(--main-color);
+    /* border: 1px solid var(--main-color); */
 }
 
 .main_header_right {
     height: 70rem;
+    /* background-color: red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .main_header_right figure img {
@@ -116,7 +129,10 @@ body {
 }
 
 
-/* temp input style code  */
+/* weather page style */
+
+
+/* temp input fields style code */
 
 .temp_form {
     width: 60%;
@@ -127,7 +143,7 @@ body {
 .temp_form input[type="text"] {
     width: 100%;
     padding: 2rem 5rem 2rem 2rem;
-    background-color: #1e202b;
+    background: #1e202b;
     color: white;
     outline: none;
     border: none;
@@ -158,15 +174,15 @@ body {
 }
 
 
-/* temp detalis show here  */
+/* temp detials show here */
 
 .tempInformation {
-    width: 50rem;
+    width: 40rem;
     margin: auto;
     min-height: 20rem;
     background-color: #323544;
     border-radius: 1rem;
-    /* padding: 1rem; */
+    padding: 1rem;
     font-family: "Roboto", sans-serif;
 }
 
@@ -184,8 +200,6 @@ body {
 .top_layer p {
     color: #fff;
     font-weight: 300;
-    padding: 2rem;
-    font-size: 1.3rem;
 }
 
 .main_layer {
@@ -193,7 +207,6 @@ body {
     height: 80%;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
 }
 
 .main_layer #city_name {
@@ -219,7 +232,7 @@ body {
     color: #009ad8;
 }
 
-sub {
+sup {
     font-size: 6rem;
     margin-top: -2rem;
 }
@@ -230,17 +243,19 @@ sub {
 }
 
 
-/* 
-.err img {
+/* 404 error page */
+
+.main_header_left .errimg img {
     width: 60rem;
     height: 30rem;
-} */
+}
 
 
-/* footer code */
+/* footer style  */
 
 footer {
     width: 100%;
+    /* height: 5rem; */
     background-color: var(--main-bg);
     margin-top: auto;
 }
@@ -248,15 +263,15 @@ footer {
 footer p {
     margin: 0;
     text-align: center;
-    color: #fff;
     line-height: 5rem;
+    color: #fff;
     font-size: 1.4rem;
 }
 
 
 /* responsive code  */
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
     .main_header_left {
         height: auto;
         margin: 5rem 0;
@@ -264,5 +279,16 @@ footer p {
     .main_header_right {
         height: auto;
         margin-top: 3rem;
+    }
+    .temp_form {
+        width: auto;
+    }
+    .tempInformation {
+        width: auto;
+    }
+    .main_layer .middle_layer p,
+    .main_layer .middle_layer .fa {
+        font-size: 5rem;
+        font-weight: 900;
     }
 }
