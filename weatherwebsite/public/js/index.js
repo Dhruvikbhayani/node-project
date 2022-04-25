@@ -6,6 +6,7 @@ const temp_real_val = document.getElementById('temp_real_val');
 const temp_status = document.getElementById('temp_status');
 const datahide = document.querySelector('.middle_layer');
 
+
 const getInfo = async(event) => {
     event.preventDefault();
 
@@ -19,7 +20,7 @@ const getInfo = async(event) => {
         try {
 
 
-            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityval}&units=metric&appid=b3a9902a00786c64bf2ec4bceca47fcb`
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=b3a9902a00786c64bf2ec4bceca47fcb`
             const response = await fetch(url);
 
             const data = await response.json();
@@ -58,5 +59,9 @@ const getInfo = async(event) => {
 
     }
 }
+date = "hello"
+
+
+
 
 submitBtn.addEventListener('click', getInfo);
